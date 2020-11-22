@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xwUc3jRvq5Dj4pPVrV/IU/mG8ZSuXtIgBuh8g2fEKEMsN4hwIPdJJdBCRSvoo6QGEhRZPRsb6ACD0G6seZKU0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rysio\\source\\repos\\WPF_Messenger\\WPF_Messenger\\WPF_Messenger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rysio\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm\\3.1.6\\microsoft.netcore.app.runtime.win-arm.3.1.6.nupkg.sha512",
+    "C:\\Users\\rysio\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm\\3.1.6\\microsoft.aspnetcore.app.runtime.win-arm.3.1.6.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,18 +1,18 @@
 ﻿WPF_Messenger
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\
+C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Release\netcoreapp3.1\
 WPF_Messenger
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\App.xaml
 11151548125
 
-6-1681594399
+4-1533502456
 1921654412462
 MainWindow.xaml;
 

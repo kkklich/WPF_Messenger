@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Messenger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="546" Width="1026" Loaded="Window_Loaded">
+        Title="MainWindow" Height="546" Width="1026">
     <Grid >
         <Label x:Name="lbl_count"  HorizontalAlignment="Left" Height="44" Margin="150,360,0,0" VerticalAlignment="Top" Width="94"/>
         <Label x:Name="lbl_nameFile"  HorizontalAlignment="Left" Height="31" Margin="42,0,0,0" VerticalAlignment="Top" Width="945"/>
         <Button x:Name="btn_file" Content="Wczytaj plik" HorizontalAlignment="Left" Height="44" Margin="42,421,0,0" VerticalAlignment="Top" Width="119" Click="btn_file_Click" />
-        <ComboBox x:Name="cmbGroup" HorizontalAlignment="Left" Height="26" Margin="249,387,0,0" VerticalAlignment="Top" Width="109" SelectionChanged="cmbGroup_SelectionChanged"/>
+        <ComboBox x:Name="cmbGroup" HorizontalAlignment="Left" Height="26" Margin="249,387,0,0" VerticalAlignment="Top" Width="109" SelectionChanged="cmbGroup_SelectionChanged" SelectedIndex="0"/>
 
 
         <ListView x:Name="listviewmessage" HorizontalAlignment="Left" Height="297" Margin="42,36,0,0" VerticalAlignment="Top" Width="945"  >
@@ -29,7 +29,7 @@
         <ListView x:Name="listViewCount" HorizontalAlignment="Center" Height="110" Margin="0,356,0,0" VerticalAlignment="Top" Width="262">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="gridName1" Header="Użytkownik" DisplayMemberBinding="{Binding User}" />
+                    <GridViewColumn x:Name="gridName1" Header="Użytkownik" DisplayMemberBinding="{Binding Grouping}" />
                     <GridViewColumn  Header="Ilość wiadomości" DisplayMemberBinding="{Binding CountText}" />
                 </GridView>
             </ListView.View>
