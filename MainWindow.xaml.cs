@@ -1,21 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using Microsoft.Win32;
-using System.Text.RegularExpressions;
-using System.Drawing;
 
 
 namespace WPF_Messenger
@@ -25,7 +13,7 @@ namespace WPF_Messenger
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         List<Class1> listClasa;
         readonly ClassMain classMain1;
         bool ifFirstBtn = true;
@@ -40,7 +28,7 @@ namespace WPF_Messenger
             listClasa = new List<Class1>();
             classMain1 = new ClassMain();
 
-            
+
 
             cmbGroup.Items.Add("Użytkownik");
             cmbGroup.Items.Add("Dzień tygodnia");
@@ -75,14 +63,16 @@ namespace WPF_Messenger
 
 
                 //listviewmessage.ItemsSource = listClasa.ToList();
-            }catch(IOException )
+            }
+            catch (IOException)
             {
                 MessageBox.Show("Błąd pliku");
-            }catch(Exception f)
+            }
+            catch (Exception f)
             {
                 MessageBox.Show(f.Message);
             }
-            
+
 
 
         }
@@ -90,7 +80,7 @@ namespace WPF_Messenger
 
 
         //function search  BUtton
-       
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -121,7 +111,8 @@ namespace WPF_Messenger
                 listViewCount.ItemsSource = tuple1.Item1;
                 gridName1.Header = tuple1.Item2;
 
-            }catch(Exception f)
+            }
+            catch (Exception f)
             {
                 MessageBox.Show(f.Message);
             }
@@ -161,11 +152,13 @@ namespace WPF_Messenger
                     }
                 }
 
-            }catch(FormatException)
+            }
+            catch (FormatException)
             {
                 MessageBox.Show("Zły format daty");
 
-            }catch(Exception f)
+            }
+            catch (Exception f)
             {
                 MessageBox.Show(f.Message);
             }
@@ -223,7 +216,8 @@ namespace WPF_Messenger
                     btn_search.Content = "Wyszukaj";
                 }
 
-            }catch(Exception f)
+            }
+            catch (Exception f)
             {
                 MessageBox.Show(f.Message);
             }

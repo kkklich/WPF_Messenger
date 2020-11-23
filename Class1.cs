@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using Microsoft.Win32;
 using System.Linq;
 
 namespace WPF_Messenger
@@ -11,7 +10,7 @@ namespace WPF_Messenger
     {
         public int Number { get; set; }
         public string User { get; set; }
-        public string Text{ get; set; }
+        public string Text { get; set; }
         public string Time { get; set; }
 
     }
@@ -38,28 +37,28 @@ namespace WPF_Messenger
             string numberMessage = tupleCount.Item1;
             List<Class1> listMessage = tupleCount.Item2;
 
-          
+
 
             return Tuple.Create(title1, numberMessage, listMessage, GroupMessages());
         }
 
-        private Tuple<string,string> FileDialogOpen()
+        private Tuple<string, string> FileDialogOpen()
         {
-            
-                StreamReader streamread;
-                OpenFileDialog open = new OpenFileDialog();
 
-                 Stream[] listStream;
-                //listStream = open.OpenFiles();
-                string alltext = "";
-                string title = "title";
+            StreamReader streamread;
+            OpenFileDialog open = new OpenFileDialog();
+
+            Stream[] listStream;
+            //listStream = open.OpenFiles();
+            string alltext = "";
+            string title = "title";
 
 
-                open.Multiselect = true;
-                open.Filter = "Pliki webowe (*.html)|*.html;";
+            open.Multiselect = true;
+            open.Filter = "Pliki webowe (*.html)|*.html;";
 
-                if (open.ShowDialog() == true)
-                {
+            if (open.ShowDialog() == true)
+            {
 
 
                 //open.OpenFiles;
@@ -67,29 +66,29 @@ namespace WPF_Messenger
                 listStream = open.OpenFiles();
 
                 foreach (var x in listStream)
+                {
+                    streamread = new StreamReader(x);
+                    string tempText = streamread.ReadToEnd();
+                    if (tempText.Contains($"<div class=\"_3b0c\"><div class=\"_3b0d\">"))
                     {
-                        streamread = new StreamReader(x);
-                        string tempText = streamread.ReadToEnd();
-                        if (tempText.Contains($"<div class=\"_3b0c\"><div class=\"_3b0d\">"))
-                        {
-                            int positionTitle = tempText.IndexOf($"<div class=\"_3b0c\"><div class=\"_3b0d\">");
-                            int positionEndTitle = tempText.IndexOf($"</div></div></div><div class=\"_4t5n\" role=\"main\">");
-                            // MessageBox.Show(positionTitle.ToString()+"  "+ positionEndTitle.ToString()); 
-                            if (positionTitle > 0 & positionEndTitle > 0)
-                                title = tempText.Substring(positionTitle + 38, positionEndTitle - positionTitle - 38);
+                        int positionTitle = tempText.IndexOf($"<div class=\"_3b0c\"><div class=\"_3b0d\">");
+                        int positionEndTitle = tempText.IndexOf($"</div></div></div><div class=\"_4t5n\" role=\"main\">");
+                        // MessageBox.Show(positionTitle.ToString()+"  "+ positionEndTitle.ToString()); 
+                        if (positionTitle > 0 & positionEndTitle > 0)
+                            title = tempText.Substring(positionTitle + 38, positionEndTitle - positionTitle - 38);
 
 
-                            tempText = tempText.Remove(0, positionTitle);
-
-                        }
-
-                        alltext += tempText;
-                        streamread.Close();
-
-                        //string textFile = streamread.ReadToEnd();
-                        // txtBlockFile.Text = File.ReadAllText(open.FileName);
+                        tempText = tempText.Remove(0, positionTitle);
 
                     }
+
+                    alltext += tempText;
+                    streamread.Close();
+
+                    //string textFile = streamread.ReadToEnd();
+                    // txtBlockFile.Text = File.ReadAllText(open.FileName);
+
+                }
 
 
 
@@ -99,17 +98,17 @@ namespace WPF_Messenger
 
                 //return "  Nazwa konwersacji: " + title;
 
-               
-
-                    //streamread = new StreamReader(open.FileName);
 
 
-                } 
-            
+                //streamread = new StreamReader(open.FileName);
+
+
+            }
+
 
             return Tuple.Create(title, alltext);
 
-            
+
 
 
         }
@@ -122,7 +121,7 @@ namespace WPF_Messenger
 
             var linqCountMessages = from x in listClasa
                                     group x by x.User into xgroup
-                                    select new ClassMain(){ Grouping = xgroup.Key, CountText = xgroup.Count(), };
+                                    select new ClassMain() { Grouping = xgroup.Key, CountText = xgroup.Count(), };
 
 
 
@@ -138,9 +137,9 @@ namespace WPF_Messenger
             // List<ClassMain> lista = (ClassMain)linqOrder.ToList();
 
             return listMain;
-           // return linqOrder.ToList();
+            // return linqOrder.ToList();
 
-           // listViewCount.ItemsSource = linqOrder.ToList();
+            // listViewCount.ItemsSource = linqOrder.ToList();
 
         }
 
@@ -148,7 +147,7 @@ namespace WPF_Messenger
 
 
         //function count and display message
-        private  Tuple<string , List<Class1>> CountMessage(string text)
+        private Tuple<string, List<Class1>> CountMessage(string text)
         {
 
             string message = text;
@@ -159,7 +158,7 @@ namespace WPF_Messenger
             string codeTime = "_3-94 _2lem";
 
             bool ifFirst = true;
-           // int countword;
+            // int countword;
             int numberMessage = 0;
 
             listClasa = new List<Class1>();
@@ -169,7 +168,7 @@ namespace WPF_Messenger
             //listviewmessage.ItemsSource = message.Split(code).ToList();
 
 
-          //  countword = message.Split(code).Length - 1;
+            //  countword = message.Split(code).Length - 1;
 
 
             foreach (var mess in message.Split(code))
@@ -250,14 +249,14 @@ namespace WPF_Messenger
             }
             //listviewmessage.ItemsSource = listClasa.ToList();
             return Tuple.Create(numberMessage.ToString(), listClasa);
-              //  numberMessage.ToString();
+            //  numberMessage.ToString();
 
         }
 
 
 
 
-        public List<Class1> DataLinq( DateTime datePic)
+        public List<Class1> DataLinq(DateTime datePic)
         {
             var linqDate = from x in this.listClasa
                            where DateTime.Parse(x.Time).Year == datePic.Year & DateTime.Parse(x.Time).Month == datePic.Month & DateTime.Parse(x.Time).Day == datePic.Day
@@ -275,7 +274,7 @@ namespace WPF_Messenger
 
 
 
-       public Tuple< List<ClassMain>,string> CmbLinq(int cmbNr)
+        public Tuple<List<ClassMain>, string> CmbLinq(int cmbNr)
         {
             var linqCountMessages = from x in listClasa
                                     group x by x.User into xgroup

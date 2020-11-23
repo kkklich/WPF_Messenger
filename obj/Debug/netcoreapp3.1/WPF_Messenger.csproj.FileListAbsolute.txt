@@ -1,4 +1,3 @@
-C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger.csprojAssemblyReference.cache
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger_MarkupCompile.cache
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\bin\Debug\netcoreapp3.1\WPF_Messenger.exe
@@ -17,3 +16,4 @@ C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger.dll
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger.pdb
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger.genruntimeconfig.cache
+C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Debug\netcoreapp3.1\WPF_Messenger.csprojAssemblyReference.cache

@@ -4,7 +4,6 @@ C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\bin\Release\netcoreapp3.
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\bin\Release\netcoreapp3.1\WPF_Messenger.runtimeconfig.dev.json
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\bin\Release\netcoreapp3.1\WPF_Messenger.dll
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\bin\Release\netcoreapp3.1\WPF_Messenger.pdb
-C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Release\netcoreapp3.1\WPF_Messenger.csprojAssemblyReference.cache
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Release\netcoreapp3.1\MainWindow.g.cs
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Release\netcoreapp3.1\App.g.cs
 C:\Users\rysio\source\repos\WPF_Messenger\WPF_Messenger\obj\Release\netcoreapp3.1\WPF_Messenger_MarkupCompile.cache
