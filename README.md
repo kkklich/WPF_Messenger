@@ -1,2 +1,4 @@
 # WPF_Messenger
+ This desktop aplication allows to you to count how many messages you have on messanger. It groups by year, month, person. 
  
+ You have to download your data from facebook. There will be HTML file which you have to upload in app.
